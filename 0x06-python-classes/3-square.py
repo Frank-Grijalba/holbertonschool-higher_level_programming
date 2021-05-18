@@ -9,6 +9,9 @@ class Square:
         """Square class init, assign a value to
         Args:
             size (int): The private arg size of the square.
+        Raise:
+            ValueError: If size is less than Zero
+            TypeError: If size is not an integer
         """
         if size < 0:
             raise ValueError("size must be >= 0")
