@@ -1,11 +1,7 @@
 #!/usr/bin/python3
 class Square:
-    """class Square
-       __size (int): The private variable.
-    """
-    __size = None
+    """class Square"""
 
     def __init__(self, size):
-        """Square class init
-           _asign a value to variable __size """
+        """Square class init, assign a value to priv var __size """
         self.__size = size
