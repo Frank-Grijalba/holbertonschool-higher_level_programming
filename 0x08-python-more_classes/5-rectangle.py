@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""1-rectangle a class Rectangle that defines
-   a rectangle by: (based on 0-rectangle.py)
+"""5-rectangle a class Rectangle that defines
+   a rectangle by: (based on 4-rectangle.py)
 """
 
 
@@ -49,3 +49,21 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * self.__height) * 2
+
+    def __str__(self):
+        """Get str"""
+        str = ''
+        if self.__width == 0 or self.__height == 0:
+            return ()
+        for i in range(self.__height):
+            str = str + ("#" * self.__width) + '\n'
+        return (str[:-1])
+
+    def __repr__(self):
+        """Get string representation."""
+        str1 = "Rectangle("
+        return str1 + str(self.__width) + ", " + str(self.__height) + ')'
+
+    def __del__(self):
+        """Get a message when the class is deleted"""
+        print("Bye rectangle...")
