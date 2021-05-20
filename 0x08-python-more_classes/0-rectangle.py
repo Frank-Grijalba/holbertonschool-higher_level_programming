@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""0-rectangle
-   empty class that defines a rectangle
+
+"""
+This is a module for a class Rectangle
 """
 
 
 class Rectangle:
-    """class rectangle"""
+    """Class of a Rectangle"""
 
     def __init__(self):
         """Initialize class"""
