@@ -2,6 +2,6 @@
 """0-rectangle empty class that defines a rectangle"""
 
 
-class Rectangle:
+class Rectangle():
     """empty class rectangle"""
     pass
