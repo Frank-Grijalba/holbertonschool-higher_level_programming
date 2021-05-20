@@ -4,6 +4,9 @@
 """
 
 
-class Rectangle():
-    """empty class rectangle"""
-    pass
+class Rectangle:
+    """class rectangle"""
+
+    def __init__(self):
+        """Initialize class"""
+        pass
