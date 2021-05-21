@@ -58,7 +58,7 @@ class Rectangle:
         """Get str"""
         str1 = ''
         if self.__width == 0 or self.__height == 0:
-            return ()
+            return str1
         for i in range(self.__height):
             str1 = str1 + str((self.print_symbol) * self.__width) + '\n'
         return (str1[:-1])
@@ -70,5 +70,5 @@ class Rectangle:
 
     def __del__(self):
         """Get a message when the class is deleted"""
-        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
