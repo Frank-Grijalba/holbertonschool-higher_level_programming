@@ -28,7 +28,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """"Get height"""
+        """Get height"""
         return self.__height
 
     @height.setter
@@ -54,7 +54,7 @@ class Rectangle:
         """str"""
         str = ''
         if self.__width == 0 or self.__height == 0:
-            return ()
+            return str
         for i in range(self.__height):
             str = str + ("#" * self.__width) + '\n'
         return (str[:-1])
