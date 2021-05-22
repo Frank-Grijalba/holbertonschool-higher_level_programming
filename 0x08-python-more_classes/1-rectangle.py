@@ -11,7 +11,7 @@ class Rectangle:
         """Initialize class"""
         if type(width) is not int:
             raise TypeError("width must be an integer")
-        if width< 0:
+        if width < 0:
             raise ValueError("width must be >= 0")
         if type(height) is not int:
             raise TypeError("height must be an integer")
