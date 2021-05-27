@@ -8,8 +8,9 @@
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 """
 
+
 def matrix_divided(matrix, div):
-    
+
     e = "matrix must be a matrix (list of lists) of integers/floats"
 
     if type(matrix) != list or len(matrix) == 0 or matrix[0] is None:
@@ -23,14 +24,12 @@ def matrix_divided(matrix, div):
                 raise TypeError(e)
 
     len_row = []
-    #c = 0
     for row in matrix:
         len_row.append(len(row))
     item = len_row[0]
-    for i in len_row :
+    for i in len_row:
         if item != i:
             raise TypeError("Each row of the matrix must have the same size")
-    #   c += 1
     if type(div) not in [float, int]:
         raise TypeError("div must be a number")
 
