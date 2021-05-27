@@ -8,8 +8,7 @@
 
 def add_integer(a, b=98):
     """
-    >>> add_integer(8, )
-    106
+    Add two integers
     """
     if type(a) not in [float, int]:
             raise TypeError('a must be an integer')

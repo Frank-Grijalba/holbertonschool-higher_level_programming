@@ -10,6 +10,9 @@
 
 
 def matrix_divided(matrix, div):
+    """
+    Divide each item of a matrix
+    """
 
     e = "matrix must be a matrix (list of lists) of integers/floats"
 
