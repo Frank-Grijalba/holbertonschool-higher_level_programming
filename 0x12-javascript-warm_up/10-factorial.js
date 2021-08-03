@@ -5,7 +5,7 @@ const number = parseInt(argv[2]);
 if (isNaN(number)) {
   console.log(1);
 } else {
-  const factorial = (n) => {
+  function factorial (n) {
     if (n <= 1) {
       return 1;
     } else {
