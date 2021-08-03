@@ -11,7 +11,7 @@ class Rectangle {
 
   print () {
     const draw = 'X';
-    for (var i = 0; i < this.height; i++) {
+    for (const i = 0; i < this.height; i++) {
       console.log(draw.repeat(this.width));
     }
   }
