@@ -14,8 +14,12 @@ if __name__ == "__main__":
     session = Session()
     Base.metadata.create_all(engine)
 
-    state = session.query(State).order_by(State.id)
-    allStates = state.all()
-
-    for states in allStates:
-        print("{:d}: {:s}".format(states.id, states.name))
+    session.query(State).filter(
+        State.id == 2
+    ).update(
+        {
+            State.name: 'New Mexico'
+        }
+    )
+    session.commit()
+    session.close()

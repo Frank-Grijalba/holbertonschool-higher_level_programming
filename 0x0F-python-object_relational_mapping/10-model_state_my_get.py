@@ -14,8 +14,13 @@ if __name__ == "__main__":
     session = Session()
     Base.metadata.create_all(engine)
 
-    state = session.query(State).order_by(State.id)
+    state = session.query(State).filter(
+        State.name == sys.argv[4]
+    )
     allStates = state.all()
 
-    for states in allStates:
-        print("{:d}: {:s}".format(states.id, states.name))
+    if allStates:
+        for states in allStates:
+            print(states.id)
+    else:
+        print("Not found")

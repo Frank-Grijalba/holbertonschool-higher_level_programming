@@ -14,8 +14,9 @@ if __name__ == "__main__":
     session = Session()
     Base.metadata.create_all(engine)
 
-    state = session.query(State).order_by(State.id)
-    allStates = state.all()
+    Louisiana = State(name="Louisiana")
+    session.add(Louisiana)
+    session.commit()
 
-    for states in allStates:
-        print("{:d}: {:s}".format(states.id, states.name))
+    print(Louisiana.id)
+    session.close()
