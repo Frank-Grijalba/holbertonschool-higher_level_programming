@@ -16,9 +16,11 @@ if __name__ == "__main__":
                          db=db_name)
     cur = db.cursor()
 
-    query = """ SELECT states.id, name
+    query = """
+    SELECT states.id, name
     FROM states
-    WHERE name LIKE '{:s}'
+    WHERE name='{:s}'
+    COLLATE latin1_general_cs
     ORDER BY states.id ASC;
     """.format(find)
 
