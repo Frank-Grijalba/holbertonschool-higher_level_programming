@@ -9,14 +9,14 @@ if __name__ == "__main__":
     password = argv[2]
     db_name = argv[3]
     find = argv[4]
-    
+
     db = MySQLdb.connect(host="localhost",
                          port=3306,
                          user=username,
                          passwd=password,
                          db=db_name)
     cur = db.cursor()
-    
+
     query = """
     SELECT cities.name
     FROM cities
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     WHERE states.name = %s
     ORDER BY cities.id ASC;
     """
-    
+
     cur.execute(query, (find, ))
     rows = cur.fetchall()
     rows = [i[0] for i in rows]
@@ -32,4 +32,3 @@ if __name__ == "__main__":
 
     cur.close()
     db.close()
-    

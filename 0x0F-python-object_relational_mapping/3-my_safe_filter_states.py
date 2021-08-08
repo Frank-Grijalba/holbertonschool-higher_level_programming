@@ -20,7 +20,7 @@ if __name__ == "__main__":
     WHERE name = %s
     ORDER BY states.id ASC;
     """
-    
+
     cur.execute(query, (find, ))
     rows = cur.fetchall()
     for row in rows:

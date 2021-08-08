@@ -14,7 +14,12 @@ if __name__ == "__main__":
                          passwd=password,
                          db=db_name)
     cur = db.cursor()
-    query = "SELECT states.id, name FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC;"
+    query = """
+    SELECT states.id, name
+    FROM states
+    WHERE name LIKE 'N%'
+    ORDER BY states.id ASC;
+    """
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:

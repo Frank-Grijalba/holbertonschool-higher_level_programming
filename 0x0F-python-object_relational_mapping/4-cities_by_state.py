@@ -8,7 +8,7 @@ if __name__ == "__main__":
     username = argv[1]
     password = argv[2]
     db_name = argv[3]
-    
+
     db = MySQLdb.connect(host="localhost",
                          port=3306,
                          user=username,
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     JOIN states ON cities.state_id = states.id
     ORDER BY cities.id ASC;
     """
-    
+
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
@@ -29,4 +29,3 @@ if __name__ == "__main__":
 
     cur.close()
     db.close()
-    
