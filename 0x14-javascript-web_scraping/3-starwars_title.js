@@ -3,7 +3,7 @@
 //episode number matches a given integer.
 const request = require('request');
 
-request(`https://swapi-api.hbtn.io/api/films/${process.argv[2]}`, (err, body) => {
+request(`https://swapi-api.hbtn.io/api/films/${process.argv[2]}`, (err, response, body) => {
   if (err) {
     console.log(err);
   } else {
